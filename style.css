@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.body{
+  background-color:aqua;
+  border-style: solid;
+}
+
+p{
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+h2{
+  color:black;
+}
+
+img {
+    border-radius: 50%;
+    margin-left: 5px;
+  }
+
+.motto {
+  background-color: aquamarine;
+  border-style: solid;
+}
