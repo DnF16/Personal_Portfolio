@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="home" id="home">
+        <h2>Home Page</h2>
+        <div class="pic">
+            <img src="profile.jpg" alt="profile" width="300" height="300">
+        </div>
+        <p>Welcome to my home page!</p>
+        <p>As a dedicated student, I am committed to academic excellence and personal growth. 
+        This website is a reflection of my passion for learning and my desire to share my experiences and knowledge with others.</p>
+
+    </div>
+</body>
+</html>
