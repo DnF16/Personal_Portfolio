@@ -1,30 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="excss.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
 </head>
 <body>
-    <div class="body">
-    <h1>About Me</h1>
-    <p>Name: Focad, Delson N.</p>
-    <div class="pic">
-    <img src="profile.jpg" alt="profile" width="300" height="300">
-    </div>
-    <p>Age: 21</p>
-    <p>Hobbies: </p>
-    <ul>
-        <li>Sleeping</li>
-        <li>Eating</li>
-        <li>Watching</li>
-        <li>Playing Basketball</li>
-    </ul>
-    <p>Location: Buyagan, La Trinidad Benguet</p>
-    </div>
-    <div class="motto">
-    <h2>Motto: Stop Dreaming and Start Doing!</h2>
-    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="loadPage('about')">About Me</a></li>
+                <li><a href="#" onclick="loadPage('contacts')">Contact</a></li>
+                <li><a href="#" onclick="loadPage('home')">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <script>
+        function loadPage(pageName) {
+            fetch(pageName + ".html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("content").innerHTML = data;
+                    if (pageName !== 'home') {
+                        const backButton = document.createElement('button');
+                        backButton.textContent = 'Back';
+                        backButton.onclick = function() {
+                            loadPage('home');
+                        };
+                        document.getElementById("content").appendChild(backButton);
+                    }
+                })
+                .catch(error => console.error("Error loading page: ", error));
+        }
+
+     
+        window.onload = function() {
+            loadPage('home');
+        };
+    </script>
 </body>
 </html>
